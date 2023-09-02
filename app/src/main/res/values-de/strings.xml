@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Mappe1</string>
+    <string name="tittel">QuickMaths</string>
+    <string name="button_1">Spiel beginnen</string>
+    <string name="button_2">Über das Spiel</string>
+    <string name="button_3">Präferenzen</string>
+
+    <string name="omspill">Über das Spiel:</string>
+    <string name="pref">Präferenzen:</string>
+    <string name="bytt">Sprache ändern:</string>
+    <string name="norsk">Auf Norwegisch umstellen:</string>
+    <string name="tysk">Auf Deutsch umstellen:</string>
+    <string name="tilbake">Zurück:</string>
+    <string name="omspillinfo">"Du magst Mathe und möchtest deine Fähigkeiten testen! Bei quickMaths geht es darum, Ihre mathematischen Fähigkeiten zu testen, um das Addieren zu üben. Mathe kann für manche schwierig sein, aber das sollte nicht sein, Sie können das schaffen! Viel Glück :)"</string>
+
+</resources>
