@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/StartSpill"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:layout_marginBottom="28dp"
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/prefbutton"
+        android:id="@+id/Pref"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:layout_marginBottom="28dp"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/omSpill"
+        android:id="@+id/OmSpill"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:layout_marginBottom="32dp"

@@ -10,7 +10,12 @@
     <string name="bytt">Sprache ändern:</string>
     <string name="norsk">Auf Norwegisch umstellen:</string>
     <string name="tysk">Auf Deutsch umstellen:</string>
+
     <string name="tilbake">Zurück:</string>
     <string name="omspillinfo">"Du magst Mathe und möchtest deine Fähigkeiten testen! Bei quickMaths geht es darum, Ihre mathematischen Fähigkeiten zu testen, um das Addieren zu üben. Mathe kann für manche schwierig sein, aber das sollte nicht sein, Sie können das schaffen! Viel Glück :)"</string>
+    <string name="velg_antall">Wählen Sie die Anzahl der Berechnungen aus:</string>
+    <string name="regn5">5</string>
+    <string name="regn10">10</string>
+    <string name="regn15">15</string>
 
 </resources>

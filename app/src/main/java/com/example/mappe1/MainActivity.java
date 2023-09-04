@@ -15,9 +15,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button prefButton = findViewById(R.id.prefbutton);
+        Button prefButton = findViewById(R.id.Pref);
 
-        Button omSpillButton = findViewById(R.id.omSpill);
+        Button omSpillButton = findViewById(R.id.OmSpill);
+
+        Button startSpillButton = findViewById(R.id.StartSpill);
+
+
+        startSpillButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBegynnSpill();
+            }
+        });
+        omSpillButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openOmSpill();
+            }
+        });
 
         prefButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,15 +41,12 @@ public class MainActivity extends AppCompatActivity {
                 openPref();
             }
         });
-
-        omSpillButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openOmSpill();
-            }
-        });
     }
 
+    public void openBegynnSpill() {
+        Intent intent = new Intent(MainActivity.this, Spill.class);
+        startActivity(intent);
+    }
     public void openPref() {
         Intent intent = new Intent(MainActivity.this, Preferanser.class);
         startActivity(intent);
@@ -43,4 +56,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, OmSpillet.class);
         startActivity(intent);
     }
+
+
 }

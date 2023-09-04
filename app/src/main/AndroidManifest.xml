@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Mappe1"
         tools:targetApi="31">
         <activity
+            android:name=".Spill"
+            android:exported="false" />
+        <activity
             android:name=".Velgregnestykker"
             android:exported="false" />
         <activity

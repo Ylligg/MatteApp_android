@@ -11,7 +11,7 @@
         android:id="@+id/textView3"
         android:layout_width="424dp"
         android:layout_height="73dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="60dp"
         android:text="@string/pref"
         android:textAlignment="center"
         android:textSize="48sp"
@@ -21,31 +21,44 @@
 
     <Button
         android:id="@+id/byttSprokButton"
-        android:layout_width="285dp"
-        android:layout_height="106dp"
+        android:layout_width="240dp"
+        android:layout_height="170dp"
         android:fontFamily="casual"
         android:text="@string/bytt"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/antallButton"
+        android:layout_width="240dp"
+        android:layout_height="170dp"
+        android:fontFamily="casual"
+        android:text="@string/velg_antall"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.792" />
 
     <Button
         android:id="@+id/tilbake"
-        android:layout_width="285dp"
-        android:layout_height="106dp"
+        android:layout_width="240dp"
+        android:layout_height="170dp"
         android:fontFamily="casual"
         android:text="@string/tilbake"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.792" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

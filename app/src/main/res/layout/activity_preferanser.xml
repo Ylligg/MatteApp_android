@@ -21,14 +21,27 @@
 
     <Button
         android:id="@+id/byttSprokButton"
-        android:layout_width="285dp"
-        android:layout_height="106dp"
+        android:layout_width="278dp"
+        android:layout_height="140dp"
         android:layout_marginTop="228dp"
         android:fontFamily="casual"
         android:text="@string/bytt"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/antallButton"
+        android:layout_width="282dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="408dp"
+        android:fontFamily="casual"
+        android:text="@string/velg_antall"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

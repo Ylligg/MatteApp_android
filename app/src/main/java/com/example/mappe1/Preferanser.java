@@ -15,11 +15,20 @@ public class Preferanser extends AppCompatActivity {
         setContentView(R.layout.activity_preferanser);
 
 
-        Button button = findViewById(R.id.byttSprokButton);
+        Button byttButton = findViewById(R.id.byttSprokButton);
+
+        Button antallButton = findViewById(R.id.antallButton);
 
         Button tilbakeButton = findViewById(R.id.tilbake);
 
-        button.setOnClickListener(new View.OnClickListener() {
+
+        antallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAntall();
+            }
+        });
+        byttButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openSprok();
@@ -36,6 +45,11 @@ public class Preferanser extends AppCompatActivity {
 
     public void openSprok() {
         Intent intent = new Intent(Preferanser.this, Sprok.class);
+        startActivity(intent);
+    }
+
+    public void openAntall() {
+        Intent intent = new Intent(Preferanser.this, Velgregnestykker.class);
         startActivity(intent);
     }
 

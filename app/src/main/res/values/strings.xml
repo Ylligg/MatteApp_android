@@ -5,6 +5,8 @@
     <string name="button_2">Om Spillet</string>
     <string name="button_3">Preferanser</string>
 
+    <string name="tilbake">Tilbake:</string>
+
     <string name="omspill">Om Spillet:</string>
     <string name="omspillinfo">Liker du matte og vil teste ut dine ferdigheter! På QuickMaths så handler spillet om å teste ut dine matte skills for å øve på å addere. Matte kan være vanskelig for noen, men det burde ikke være det, dette klarer du! Masse lykke til :)</string>
 
@@ -12,7 +14,10 @@
     <string name="bytt">Bytt språk:</string>
     <string name="norsk">Bytt til norsk:</string>
     <string name="tysk">Bytt til tysk:</string>
-    <string name="tilbake">Tilbake:</string>
 
+    <string name="velg_antall">Velg antall regnestykker:</string>
+    <string name="regn5">5</string>
+    <string name="regn10">10</string>
+    <string name="regn15">15</string>
 
 </resources>
