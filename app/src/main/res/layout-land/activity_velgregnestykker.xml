@@ -27,11 +27,13 @@
         app:layout_constraintVertical_bias="0.133" />
 
     <Button
-        android:id="@+id/StartSpill"
+        android:id="@+id/tall5"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:fontFamily="casual"
         android:text="@string/regn5"
+        android:textColorHighlight="#E35050"
+        android:textColorLink="#EC5252"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +43,7 @@
         app:layout_constraintVertical_bias="0.938" />
 
     <Button
-        android:id="@+id/Pref"
+        android:id="@+id/tall15"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:fontFamily="casual"
@@ -68,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/OmSpill"
+        android:id="@+id/tall10"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:fontFamily="casual"

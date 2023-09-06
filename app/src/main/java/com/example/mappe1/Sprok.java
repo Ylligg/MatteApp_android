@@ -60,6 +60,7 @@ public class Sprok extends AppCompatActivity {
             Locale locale = new Locale(landskode);
             locale.setDefault(locale);
 
+
             Resources resource = Sprok.getResources();
             DisplayMetrics metrics = resource.getDisplayMetrics();
             Configuration config = resource.getConfiguration();

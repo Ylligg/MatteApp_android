@@ -27,12 +27,13 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <Button
-        android:id="@+id/StartSpill"
+        android:id="@+id/tall5"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:fontFamily="casual"
         android:text="@string/regn5"
         android:textSize="50sp"
+        android:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -41,7 +42,21 @@
         app:layout_constraintVertical_bias="0.274" />
 
     <Button
-        android:id="@+id/Pref"
+        android:id="@+id/tall10"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:fontFamily="casual"
+        android:text="@string/regn10"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.486" />
+
+    <Button
+        android:id="@+id/tall15"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:fontFamily="casual"
@@ -52,7 +67,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.697"
+        tools:ignore="DuplicateIds" />
 
     <Button
         android:id="@+id/tilbake"
@@ -66,19 +82,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/OmSpill"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:fontFamily="casual"
-        android:text="@string/regn10"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
