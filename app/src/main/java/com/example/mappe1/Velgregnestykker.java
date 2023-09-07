@@ -21,19 +21,11 @@ public class Velgregnestykker extends AppCompatActivity {
     public static final String TALL2 = "tall2";
     public static final String TALL3 = "tall3";
 
-    private int tall1;
-    private int tall2;
-    private int tall3;
+    private int tall1, tall2, tall3;
 
-    Button regn5;
-    Button regn10;
-    Button regn15;
+    Button regn5,regn10, regn15;
 
-    int bakgrunn5;
-
-    int bakgrunn10;
-
-    int bakgrunn15;
+    int bakgrunn5, bakgrunn10, bakgrunn15 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,18 +43,15 @@ public class Velgregnestykker extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
+                bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
 
-                    bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
-                    bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
-                    bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                regn5.setBackgroundColor(bakgrunn5);
+                regn10.setBackgroundColor(bakgrunn10);
+                regn15.setBackgroundColor(bakgrunn15);
 
-                    regn5.setBackgroundColor(bakgrunn5);
-                    regn10.setBackgroundColor(bakgrunn10);
-                    regn15.setBackgroundColor(bakgrunn15);
-
-                    saveData();
-
-
+                saveData();
 
             }
         });
@@ -72,17 +61,15 @@ public class Velgregnestykker extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
+                bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
 
-                    bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
-                    bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
-                    bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                regn5.setBackgroundColor(bakgrunn5);
+                regn10.setBackgroundColor(bakgrunn10);
+                regn15.setBackgroundColor(bakgrunn15);
 
-                    regn5.setBackgroundColor(bakgrunn5);
-                    regn10.setBackgroundColor(bakgrunn10);
-                    regn15.setBackgroundColor(bakgrunn15);
-
-                    saveData();
-
+                saveData();
 
             }
         });
@@ -92,20 +79,17 @@ public class Velgregnestykker extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
+                bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
 
-                    bakgrunn5 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
-                    bakgrunn10 = ResourcesCompat.getColor(getResources(), R.color.defualt, null);
-                    bakgrunn15 = ResourcesCompat.getColor(getResources(), R.color.orange, null);
+                regn5.setBackgroundColor(bakgrunn5);
+                regn10.setBackgroundColor(bakgrunn10);
+                regn15.setBackgroundColor(bakgrunn15);
 
-                    regn5.setBackgroundColor(bakgrunn5);
-                    regn10.setBackgroundColor(bakgrunn10);
-                    regn15.setBackgroundColor(bakgrunn15);
+                saveData();
 
-                    saveData();
             }
-
-
-
         });
 
         loadData();
@@ -122,6 +106,7 @@ public class Velgregnestykker extends AppCompatActivity {
 
 
     }
+
     public void openHome() {
         Intent intent = new Intent(Velgregnestykker.this, Preferanser.class);
         startActivity(intent);
@@ -136,6 +121,7 @@ public class Velgregnestykker extends AppCompatActivity {
         editor.putInt(TALL3, bakgrunn15);
 
         editor.apply();
+
         Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
 
     }
@@ -146,17 +132,13 @@ public class Velgregnestykker extends AppCompatActivity {
         tall2 = preferences.getInt(TALL2, 0);
         tall3 = preferences.getInt(TALL3, 0);
 
-
     }
 
     public void updateViews() {
        regn5.setBackgroundColor(tall1);
        regn10.setBackgroundColor(tall2);
        regn15.setBackgroundColor(tall3);
+
     }
-
-
-
-
 
 }
