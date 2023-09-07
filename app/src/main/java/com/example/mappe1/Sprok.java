@@ -2,6 +2,8 @@ package com.example.mappe1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -41,26 +43,21 @@ public class Sprok extends AppCompatActivity {
         norskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                landskode = "no";
-                setLocal(Sprok.this,landskode);
-                finish();
-                startActivity(getIntent());
-                saveData();
+                LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("");
+                AppCompatDelegate.setApplicationLocales(appLocale);
+                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
             }
         });
 
         tyskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                landskode = "de";
-                setLocal(Sprok.this,landskode);
-                finish();
-                startActivity(getIntent());
-                saveData();
+                LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("de-DE");
+                AppCompatDelegate.setApplicationLocales(appLocale);
+                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
 
             }
         });
-        loadData();
 
         tilbakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,56 +66,10 @@ public class Sprok extends AppCompatActivity {
             }
         });
 
-
-
     }
-        @SuppressWarnings("deprecation")
-        public void setLocal(Activity Sprok, String landskode) {
-            Locale locale = new Locale(landskode);
-            locale.setDefault(locale);
-
-            Resources resource = Sprok.getResources();
-            DisplayMetrics metrics = resource.getDisplayMetrics();
-            Configuration config = resource.getConfiguration();
-            config.setLocale(locale);
-            resource.updateConfiguration(config,metrics);
-
-        }
 
     public void openPref() {
         Intent intent = new Intent(Sprok.this, Preferanser.class);
         startActivity(intent);
-    }
-
-    public void saveData() {
-        SharedPreferences preferences = getSharedPreferences(SharedPref, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(TEXT, landskode);
-        editor.apply();
-
-        Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void loadData() {
-        SharedPreferences preferences = getSharedPreferences(SharedPref, MODE_PRIVATE);
-        text = preferences.getString(TEXT, "");
-
-    }
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("landskode", text);
-
-    }
-
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        text = savedInstanceState.getString("landskode");
-        setLocal(Sprok.this,text);
-        finish();
-        startActivity(getIntent());
     }
 }
