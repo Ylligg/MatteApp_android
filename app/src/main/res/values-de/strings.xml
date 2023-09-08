@@ -20,5 +20,12 @@
     <string name="safeguard">Sind Sie sicher, dass Sie zurückkehren möchten?</string>
     <string name="spillsvarHint">Antwort:</string>
     <string name="spørsmålTxt">Fragen</string>
+    <string name="ferdigAlert">Das Spiel ist vorbei. Möchten Sie zurückgehen oder eine weitere Runde versuchen?</string>
+    <string name="sjekksvarknapp">Prüfe die Antwort</string>
+    <string name="enTil">EINER NOCH!</string>
+    <string name="jaAlert">Ja</string>
+    <string name="neiAlert">Nein</string>
+    <string name="tilbakemeldingdel1">" Es war leider falsch, hier ein kleiner Hinweis: Falls Hans das getan hat "</string>
+    <string name="tilbakemeldingdel2">"Äpfel und Gustav haben "</string>
 
 </resources>

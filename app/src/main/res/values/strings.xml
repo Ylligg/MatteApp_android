@@ -23,6 +23,13 @@
     <string name="safeguard">Er du sikker på at du vil gå tilbake?</string>
     <string name="spillsvarHint">Svar:</string>
     <string name="spørsmålTxt">Spørsmål</string>
+    <string name="ferdigAlert">Spillet er ferdig, vil du gå tilbake eller prøve en runde til?</string>
+    <string name="sjekksvarknapp">Sjekk svar</string>
+    <string name="enTil">EN TIL!</string>
+    <string name="jaAlert">Ja</string>
+    <string name="neiAlert">Nei</string>
+    <string name="tilbakemeldingdel1">"Det var dessverre feil, her er et lite hint: Hvis Daniel har "</string>
+    <string name="tilbakemeldingdel2">epler og Erik har </string>
 
 
 </resources>

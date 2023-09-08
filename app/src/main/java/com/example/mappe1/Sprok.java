@@ -38,16 +38,15 @@ public class Sprok extends AppCompatActivity {
                 Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
                 LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("");
                 AppCompatDelegate.setApplicationLocales(appLocale);
-                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
             }
         });
 
         tyskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
                 LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("de-DE");
                 AppCompatDelegate.setApplicationLocales(appLocale);
-                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
 
             }
         });
