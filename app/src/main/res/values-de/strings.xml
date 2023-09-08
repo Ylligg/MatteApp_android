@@ -17,5 +17,8 @@
     <string name="regn5">5</string>
     <string name="regn10">10</string>
     <string name="regn15">15</string>
+    <string name="safeguard">Sind Sie sicher, dass Sie zurückkehren möchten?</string>
+    <string name="spillsvarHint">Antwort:</string>
+    <string name="spørsmålTxt">Fragen</string>
 
 </resources>

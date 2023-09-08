@@ -4,6 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Spill">
+    android:background="@drawable/bakgrunn"
+    tools:context=".Preferanser">
+
+    <TextView
+        android:id="@+id/spørsmåltxt"
+        android:layout_width="254dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/spørsmålTxt"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spørsmåltall"
+        android:layout_width="162dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="76dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spørsmålstykke"
+        android:layout_width="424dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="200dp"
+        android:text="2 + 2"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/skrivSvar"
+        android:layout_width="395dp"
+        android:layout_height="96dp"
+        android:ems="10"
+        android:textSize="28sp"
+        android:hint="@string/spillsvarHint"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <Button
+        android:id="@+id/sendSvar"
+        android:layout_width="255dp"
+        android:layout_height="134dp"
+        android:layout_marginBottom="64dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tilbakemelding"
+        android:layout_width="387dp"
+        android:layout_height="270dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

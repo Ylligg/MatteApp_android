@@ -20,15 +20,7 @@ import java.util.Locale;
 
 public class Sprok extends AppCompatActivity {
 
-    public static final String SharedPref = "sharedpref";
-
-    public static final String TEXT = "text";
-
-     String text;
-
-    String landskode;
-
-    Button norskButton, tyskButton;
+    Button norskButton, tyskButton, tilbakeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +30,12 @@ public class Sprok extends AppCompatActivity {
         norskButton = findViewById(R.id.norsk);
         tyskButton = findViewById(R.id.tysk);
 
-        Button tilbakeButton = findViewById(R.id.tilbake);
+        tilbakeButton = findViewById(R.id.tilbake);
 
         norskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();
                 LocaleListCompat appLocale = LocaleListCompat.forLanguageTags("");
                 AppCompatDelegate.setApplicationLocales(appLocale);
                 Toast.makeText(Sprok.this, "DATA SAVED", Toast.LENGTH_SHORT).show();

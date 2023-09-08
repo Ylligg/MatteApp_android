@@ -21,7 +21,11 @@ public class Velgregnestykker extends AppCompatActivity {
     public static final String TALL2 = "tall2";
     public static final String TALL3 = "tall3";
 
+    public static final String VALGT = "valgt";
+
     private int tall1, tall2, tall3;
+
+    public int valgt =5;
 
     Button regn5,regn10, regn15;
 
@@ -51,6 +55,8 @@ public class Velgregnestykker extends AppCompatActivity {
                 regn10.setBackgroundColor(bakgrunn10);
                 regn15.setBackgroundColor(bakgrunn15);
 
+                valgt=5;
+
                 saveData();
 
             }
@@ -69,6 +75,8 @@ public class Velgregnestykker extends AppCompatActivity {
                 regn10.setBackgroundColor(bakgrunn10);
                 regn15.setBackgroundColor(bakgrunn15);
 
+                valgt=10;
+
                 saveData();
 
             }
@@ -86,6 +94,8 @@ public class Velgregnestykker extends AppCompatActivity {
                 regn5.setBackgroundColor(bakgrunn5);
                 regn10.setBackgroundColor(bakgrunn10);
                 regn15.setBackgroundColor(bakgrunn15);
+
+                valgt=15;
 
                 saveData();
 
@@ -119,6 +129,7 @@ public class Velgregnestykker extends AppCompatActivity {
         editor.putInt(TALL1, bakgrunn5);
         editor.putInt(TALL2, bakgrunn10);
         editor.putInt(TALL3, bakgrunn15);
+        editor.putInt(VALGT, valgt);
 
         editor.apply();
 

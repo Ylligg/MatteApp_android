@@ -20,4 +20,9 @@
     <string name="regn10">10</string>
     <string name="regn15">15</string>
 
+    <string name="safeguard">Er du sikker på at du vil gå tilbake?</string>
+    <string name="spillsvarHint">Svar:</string>
+    <string name="spørsmålTxt">Spørsmål</string>
+
+
 </resources>
