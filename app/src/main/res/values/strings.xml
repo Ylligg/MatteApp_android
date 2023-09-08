@@ -29,7 +29,9 @@
     <string name="jaAlert">Ja</string>
     <string name="neiAlert">Nei</string>
     <string name="tilbakemeldingdel1">"Det var dessverre feil, her er et lite hint: Hvis Daniel har "</string>
-    <string name="tilbakemeldingdel2">epler og Erik har </string>
+    <string name="tilbakemeldingdel2">" epler og Erik har "</string>
+    <string name="tilbakemeldingdel3">" epler, hvor mye har de til sammen da?"</string>
+    <string name="riktigSvar">Riktig, bra jobbet ;)</string>
 
 
 </resources>

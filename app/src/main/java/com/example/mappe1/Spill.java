@@ -60,7 +60,7 @@ public class Spill extends AppCompatActivity {
                 int tall2 = (int) Math.floor(Math.random() * 31);
                 String tall1sting = String.valueOf(tall1);
                 String tall2sting = String.valueOf(tall2);
-                String spørsmål = tall1sting + "  +  " + tall2sting;
+                String spørsmål = tall1sting + " + " + tall2sting;
                 int svar = tall1 + tall2;
 
                 arraySpørsmål.add(spørsmål);
@@ -94,12 +94,15 @@ public class Spill extends AppCompatActivity {
                 String skrevetsvar = String.valueOf(skrivsvar.getText());
                 String svar = String.valueOf(arraySvar.get(i));
 
-                if(skrevetsvar.equals(svar)){
 
-                    tilbakemelding.setText("Riktig");
+                if(skrevetsvar.equals(svar)){
+                    String riktigSvar = getResources().getString(R.string.riktigSvar);
+                    tilbakemelding.setText(riktigSvar);
+                    skrivsvar.setText("");
 
                     arraySpørsmål.remove(i);
                     arraySvar.remove(i);
+
                     Log.d("hei2", String.valueOf(arraySpørsmål));
                     i = (int) Math.floor(Math.random() * arraySpørsmål.size());
                     spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
@@ -108,9 +111,10 @@ public class Spill extends AppCompatActivity {
                 } else {
                     String tilbakemeldingDel1 = getResources().getString(R.string.tilbakemeldingdel1);
                     String tilbakemeldingDel2 = getResources().getString(R.string.tilbakemeldingdel2);
+                    String tilbakemeldingDel3 = getResources().getString(R.string.tilbakemeldingdel3);
 
-                    String regnestykke = String.valueOf(arraySpørsmål.get(i));
-                    String tilbakemeldingString = tilbakemeldingDel1 + regnestykke.substring(0,3) + tilbakemeldingDel2 + regnestykke.substring(6,9) + " epler, hvor mye har de til sammen da?";
+                    String[] regnestykke = String.valueOf(arraySpørsmål.get(i)).split(" ");
+                    String tilbakemeldingString = tilbakemeldingDel1 + regnestykke[0] + tilbakemeldingDel2 + regnestykke[2] + tilbakemeldingDel3;
                     tilbakemelding.setText(tilbakemeldingString);
                 }
 

@@ -25,7 +25,9 @@
     <string name="enTil">EINER NOCH!</string>
     <string name="jaAlert">Ja</string>
     <string name="neiAlert">Nein</string>
-    <string name="tilbakemeldingdel1">" Es war leider falsch, hier ein kleiner Hinweis: Falls Hans das getan hat "</string>
-    <string name="tilbakemeldingdel2">"Äpfel und Gustav haben "</string>
+    <string name="tilbakemeldingdel1">"Es war leider falsch, hier ein kleiner Hinweis: Falls Hans das getan hat "</string>
+    <string name="tilbakemeldingdel2">" Äpfel und Gustav haben "</string>
+    <string name="tilbakemeldingdel3">" Äpfel, wie viel sind es dann insgesamt?"</string>
+    <string name="riktigSvar">Richtig, gute Arbeit ;)</string>
 
 </resources>
