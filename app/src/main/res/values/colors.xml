@@ -4,4 +4,6 @@
     <color name="orange">#D69E2F</color>
     <color name="defualt">#6750a4</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transpareent">#41FFFFFF</color>
+
 </resources>

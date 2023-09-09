@@ -2,14 +2,10 @@ package com.example.mappe1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,28 +24,26 @@ public class Spill extends AppCompatActivity {
     String valgt;
     ArrayList arraySpørsmål, arraySvar;
     int i;
-    Resources resources;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spill);
 
-
+        // henter hvilket antall som ble valgt fra preferanser (5, 10, 15)
         SharedPreferences preferences = getSharedPreferences(SharedPref, MODE_PRIVATE);
         valgt = Velgregnestykker.VALGT;
         valgttallet = preferences.getInt(valgt, 0);
 
         sendsvar = findViewById(R.id.sendSvar);
-
-
         spørsmåltall = findViewById(R.id.spørsmåltall);
         spørsmålstykke =  findViewById(R.id.spørsmålstykke);
         skrivsvar =  findViewById(R.id.skrivSvar);
         tilbakemelding =  findViewById(R.id.tilbakemelding);
 
+        spørsmåltall.setText("1");
         arraySpørsmål = new ArrayList(15);
         arraySvar = new ArrayList(15);
-
 
         // legger regnestykker og svar inn i arrays
         for(int i =0; i < 15; i++){
@@ -79,14 +73,11 @@ public class Spill extends AppCompatActivity {
             }
         }
 
-        Log.d("hello", String.valueOf(arraySpørsmål));
-        Log.d("hello2", String.valueOf(arraySvar));
-
 
         i = (int) Math.floor(Math.random() * arraySpørsmål.size());
         spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
 
-        Log.d("hei2", String.valueOf(arraySvar.get(i)));
+
 
         sendsvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,18 +86,30 @@ public class Spill extends AppCompatActivity {
                 String svar = String.valueOf(arraySvar.get(i));
 
 
+
                 if(skrevetsvar.equals(svar)){
                     String riktigSvar = getResources().getString(R.string.riktigSvar);
+
+
                     tilbakemelding.setText(riktigSvar);
                     skrivsvar.setText("");
 
                     arraySpørsmål.remove(i);
                     arraySvar.remove(i);
 
-                    Log.d("hei2", String.valueOf(arraySpørsmål));
-                    i = (int) Math.floor(Math.random() * arraySpørsmål.size());
-                    spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
-                    nestespørsmål();
+
+
+                    if(tall >= valgttallet){
+                        alert();
+
+                    } else{
+
+
+                        i = (int) Math.floor(Math.random() * arraySpørsmål.size());
+                        spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
+                        nestespørsmål();
+                    }
+
 
                 } else {
                     String tilbakemeldingDel1 = getResources().getString(R.string.tilbakemeldingdel1);
@@ -119,12 +122,9 @@ public class Spill extends AppCompatActivity {
                 }
 
 
-                if(tall >= valgttallet){
-                    alert();
-                }
+
             }
         });
-
 
     }
     // metode for å vise en safeguard hvis spilleren trykker på tilbake knappen med et uhel
@@ -188,11 +188,24 @@ public class Spill extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("tall", tall);
+
+
+
+        outState.putStringArrayList("arrayspørsmål", arraySpørsmål);
+        outState.putIntegerArrayList("arraysvar", arraySvar);
+        outState.putInt("posisjon", i);
     }
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         tall = savedInstanceState.getInt("tall");
         spørsmåltall.setText(String.valueOf(tall));
+
+
+        arraySpørsmål = savedInstanceState.getStringArrayList("arrayspørsmål");
+        arraySvar = savedInstanceState.getStringArrayList("arraysvar");
+        i  = savedInstanceState.getInt("posisjon");
+        spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
+
     }
 }

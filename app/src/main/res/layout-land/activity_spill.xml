@@ -16,31 +16,31 @@
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/spørsmåltall"
-        android:layout_width="162dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="98dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/spørsmålstykke"
-        android:layout_width="424dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="200dp"
-        android:textAlignment="center"
+        android:layout_width="234dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="textStart"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.713"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,38 +49,41 @@
         android:layout_width="395dp"
         android:layout_height="96dp"
         android:ems="10"
-        android:textSize="28sp"
         android:hint="@string/spillsvarHint"
         android:inputType="number"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <Button
         android:id="@+id/sendSvar"
         android:layout_width="255dp"
         android:layout_height="134dp"
-        android:layout_marginBottom="64dp"
-        android:textSize="40sp"
         android:text="@string/sjekksvarknapp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
 
     <TextView
         android:id="@+id/tilbakemelding"
-        android:layout_width="387dp"
-        android:layout_height="270dp"
+        android:layout_width="312dp"
+        android:layout_height="266dp"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
+        app:layout_constraintVertical_bias="0.8" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
