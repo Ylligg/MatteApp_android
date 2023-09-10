@@ -9,23 +9,23 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="410dp"
+        android:layout_width="379dp"
         android:layout_height="70dp"
+        android:fontFamily="casual"
         android:text="@string/omspill"
-        android:textStyle="bold"
-        android:textAlignment="center"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintVertical_bias="0.103" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="375dp"
-        android:layout_height="686dp"
+        android:layout_width="373dp"
+        android:layout_height="669dp"
         android:text="@string/omspillinfo"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"

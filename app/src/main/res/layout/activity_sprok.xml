@@ -11,6 +11,8 @@
         android:id="@+id/textView3"
         android:layout_width="395dp"
         android:layout_height="58dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
         android:layout_marginTop="112dp"
         android:text="@string/bytt"
         android:textAlignment="center"
@@ -22,25 +24,26 @@
     <Button
         android:id="@+id/norsk"
         android:layout_width="399dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="228dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="252dp"
         android:fontFamily="casual"
         android:text="@string/norsk"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tysk"
         android:layout_width="399dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="412dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="496dp"
         android:fontFamily="casual"
         android:text="@string/tysk"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
