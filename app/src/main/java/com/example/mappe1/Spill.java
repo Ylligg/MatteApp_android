@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class Spill extends AppCompatActivity {
     private int tall =1, valgttallet, i;
-    TextView spørsmåltall, spørsmålstykke, tilbakemelding, spørsmåltxt;
+    TextView spørsmåltall, spørsmålstykke, tilbakemelding;
     EditText skrivsvar;
     Button sendsvar;
     public static final String SharedPref = "sharedpref";
@@ -38,11 +38,10 @@ public class Spill extends AppCompatActivity {
         sendsvar = findViewById(R.id.sendSvar);
         spørsmåltall = findViewById(R.id.spørsmåltall);
         spørsmålstykke =  findViewById(R.id.spørsmålstykke);
-
         skrivsvar =  findViewById(R.id.skrivSvar);
         tilbakemelding =  findViewById(R.id.tilbakemelding);
 
-        spørsmåltall.setText("1");
+        spørsmåltall.setText(String.valueOf(tall));
         arraySpørsmål = new ArrayList(15);
         arraySvar = new ArrayList(15);
 
