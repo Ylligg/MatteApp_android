@@ -70,17 +70,4 @@
         app:layout_constraintVertical_bias="0.697"
         tools:ignore="DuplicateIds" />
 
-    <Button
-        android:id="@+id/tilbake"
-        android:layout_width="220dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="casual"
-        android:text="@string/tilbake"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

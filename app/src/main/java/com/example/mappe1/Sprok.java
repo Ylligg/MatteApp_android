@@ -30,7 +30,7 @@ public class Sprok extends AppCompatActivity {
         norskButton = findViewById(R.id.norsk);
         tyskButton = findViewById(R.id.tysk);
 
-        tilbakeButton = findViewById(R.id.tilbake);
+
 
         norskButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,17 +51,8 @@ public class Sprok extends AppCompatActivity {
             }
         });
 
-        tilbakeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openPref();
-            }
-        });
 
     }
 
-    public void openPref() {
-        Intent intent = new Intent(Sprok.this, Preferanser.class);
-        startActivity(intent);
-    }
+
 }

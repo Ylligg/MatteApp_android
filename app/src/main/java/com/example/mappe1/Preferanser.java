@@ -19,8 +19,6 @@ public class Preferanser extends AppCompatActivity {
 
         Button antallButton = findViewById(R.id.antallButton);
 
-        Button tilbakeButton = findViewById(R.id.tilbake);
-
 
         antallButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,12 +33,6 @@ public class Preferanser extends AppCompatActivity {
             }
         });
 
-        tilbakeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openHome();
-            }
-        });
     }
 
     public void openSprok() {

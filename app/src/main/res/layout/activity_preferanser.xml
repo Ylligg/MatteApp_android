@@ -9,54 +9,42 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="424dp"
-        android:layout_height="73dp"
+        android:layout_width="414dp"
+        android:layout_height="117dp"
         android:layout_marginTop="112dp"
         android:text="@string/pref"
         android:textAlignment="center"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/byttSprokButton"
-        android:layout_width="278dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="228dp"
+        android:layout_width="303dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="272dp"
         android:fontFamily="casual"
         android:text="@string/bytt"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/antallButton"
-        android:layout_width="282dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="408dp"
+        android:layout_width="324dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="508dp"
         android:fontFamily="casual"
         android:text="@string/velg_antall"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tilbake"
-        android:layout_width="285dp"
-        android:layout_height="106dp"
-        android:fontFamily="casual"
-        android:text="@string/tilbake"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

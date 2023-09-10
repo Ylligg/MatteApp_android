@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/norsk"
-        android:layout_width="400dp"
-        android:layout_height="106dp"
+        android:layout_width="399dp"
+        android:layout_height="130dp"
         android:layout_marginTop="228dp"
         android:fontFamily="casual"
         android:text="@string/norsk"
@@ -34,30 +34,15 @@
 
     <Button
         android:id="@+id/tysk"
-        android:layout_width="400dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="380dp"
+        android:layout_width="399dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="412dp"
         android:fontFamily="casual"
         android:text="@string/tysk"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tilbake"
-        android:layout_width="400dp"
-        android:layout_height="106dp"
-        android:fontFamily="casual"
-        android:text="@string/tilbake"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

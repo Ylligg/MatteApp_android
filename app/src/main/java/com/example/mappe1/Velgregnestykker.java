@@ -37,7 +37,6 @@ public class Velgregnestykker extends AppCompatActivity {
         setContentView(R.layout.activity_velgregnestykker);
 
 
-        Button tilbakeButton = findViewById(R.id.tilbake);
         regn5 = findViewById(R.id.tall5);
         regn10 = findViewById(R.id.tall10);
         regn15 = findViewById(R.id.tall15);
@@ -106,21 +105,8 @@ public class Velgregnestykker extends AppCompatActivity {
         updateViews();
 
 
-
-        tilbakeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openHome();
-            }
-        });
-
-
     }
 
-    public void openHome() {
-        Intent intent = new Intent(Velgregnestykker.this, Preferanser.class);
-        startActivity(intent);
-    }
 
     public void saveData() {
         SharedPreferences preferences = getSharedPreferences(SharedPref, MODE_PRIVATE);

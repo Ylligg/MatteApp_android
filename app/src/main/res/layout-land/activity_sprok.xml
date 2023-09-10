@@ -11,56 +11,43 @@
         android:id="@+id/textView3"
         android:layout_width="395dp"
         android:layout_height="58dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="casual"
         android:text="@string/bytt"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/norsk"
-        android:layout_width="330dp"
-        android:layout_height="110dp"
+        android:layout_width="325dp"
+        android:layout_height="200dp"
         android:fontFamily="casual"
         android:text="@string/norsk"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.862" />
 
     <Button
         android:id="@+id/tysk"
-        android:layout_width="330dp"
-        android:layout_height="110dp"
+        android:layout_width="325dp"
+        android:layout_height="200dp"
         android:fontFamily="casual"
         android:text="@string/tysk"
-        android:textSize="30sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
-
-    <Button
-        android:id="@+id/tilbake"
-        android:layout_width="400dp"
-        android:layout_height="106dp"
-        android:fontFamily="casual"
-        android:text="@string/tilbake"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintVertical_bias="0.862" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
