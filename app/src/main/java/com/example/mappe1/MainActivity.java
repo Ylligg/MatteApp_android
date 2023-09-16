@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button prefButton = findViewById(R.id.Pref);
-
         Button omSpillButton = findViewById(R.id.OmSpill);
-
         Button startSpillButton = findViewById(R.id.StartSpill);
 
 

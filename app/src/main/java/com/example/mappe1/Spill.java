@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,18 +33,18 @@ public class Spill extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences(SharedPref, MODE_PRIVATE);
         valgt = Velgregnestykker.VALGT;
         valgttallet = preferences.getInt(valgt, 0);
-
+        // deklarerer text osv.
         sendsvar = findViewById(R.id.sendSvar);
         spørsmåltall = findViewById(R.id.spørsmåltall);
         spørsmålstykke =  findViewById(R.id.spørsmålstykke);
         skrivsvar =  findViewById(R.id.skrivSvar);
         tilbakemelding =  findViewById(R.id.tilbakemelding);
-
+        // setter text av hvilket regnestykke vi er på (1,2,3?) og lager array for stykkene og svar
         spørsmåltall.setText(String.valueOf(tall));
         arraySpørsmål = new ArrayList(15);
         arraySvar = new ArrayList(15);
 
-        // legger regnestykker og svar inn i arrays
+        // genererer regnestykker og svar og lagrer dem inn i arrayene
         for(int i =0; i < 15; i++){
             for(int j =0; j < 15; j++) {
 
@@ -72,38 +71,39 @@ public class Spill extends AppCompatActivity {
                     }
                 }
             }
-
+            // når vi har 15 regnestykker så er vi ferdig
             if(arraySpørsmål.size() == 15){
                 break;
             }
         }
-
+        // velger en tilfeldig posisjon som skal velge regnestykke
         i = (int) Math.floor(Math.random() * arraySpørsmål.size());
         spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
 
+        // når man bekrefter svar så vil det vise om det er riktig eller ikke
         sendsvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // tar det du har skrevet og svaret for regnestykket
                 String skrevetsvar = String.valueOf(skrivsvar.getText());
                 String svar = String.valueOf(arraySvar.get(i));
 
                 // hvis det du har skrevet er det samme som svaret så forstetter spillet
                 if(skrevetsvar.equals(svar)){
+                    // tilbakemelding blir sendt at det var riktig og sletter tekst feltet
                     String riktigSvar = getResources().getString(R.string.riktigSvar);
-
                     tilbakemelding.setText(riktigSvar);
                     skrivsvar.setText("");
-
+                    // regnestykket og svaret blir slettet fra arrayene slik at de ikke blir vist igjen
                     arraySpørsmål.remove(i);
                     arraySvar.remove(i);
 
-                    // hvis vi har nådd maks antall spørsmål (5,10 eller 15) så er spillet ferdigm, ellers så forsetter spillet
+                    // hvis vi har nådd maks antall spørsmål (5,10 eller 15) så er spillet ferdig og en prompt blir vist, ellers så forsetter spillet
                     if(tall >= valgttallet){
                         alert();
 
                     } else{
-
+                        // en ny posisjon blir valgt og nytt spørsmål blir vist i appen
                         i = (int) Math.floor(Math.random() * arraySpørsmål.size());
                         spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
                         nestespørsmål();
@@ -132,7 +132,7 @@ public class Spill extends AppCompatActivity {
         String ja = getResources().getString(R.string.jaAlert);
         String nei = getResources().getString(R.string.neiAlert);
         String safeguard = getResources().getString(R.string.safeguard);
-
+        // alert boksen
         new AlertDialog.Builder(this)
                 .setMessage(safeguard)
                 .setCancelable(false)
@@ -161,7 +161,7 @@ public class Spill extends AppCompatActivity {
         String ferdigAlert = getResources().getString(R.string.ferdigAlert);
         String tilbake = getResources().getString(R.string.tilbake);
         String enTil = getResources().getString(R.string.enTil);
-
+        // alert boksen
         new AlertDialog.Builder(this)
                 .setMessage(ferdigAlert)
                 .setCancelable(false)
@@ -183,12 +183,12 @@ public class Spill extends AppCompatActivity {
     }
 
 
-    // Kilde for å lagre spørsmål indikator, regnestykkene, svarene og den valgte regnestykkets om vises når telefonen roteres
+    // Kilde for å lagre spørsmål indikator, regnestykkene, svarene og den valgte regnestykkets som vises når telefonen roteres
     // https://www.youtube.com/watch?v=TcTgbVudLyQ&t=118s
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-
+        // lagrer variabler
         outState.putInt("tall", tall);
         outState.putStringArrayList("arrayspørsmål", arraySpørsmål);
         outState.putIntegerArrayList("arraysvar", arraySvar);
@@ -207,7 +207,7 @@ public class Spill extends AppCompatActivity {
         arraySvar = savedInstanceState.getStringArrayList("arraysvar");
         i  = savedInstanceState.getInt("posisjon");
 
-        // stykket blir vist
+        // stykket blir vist på appen
         spørsmålstykke.setText(String.valueOf(arraySpørsmål.get(i)));
 
     }

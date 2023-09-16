@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Mappe1"
+rootProject.name = "Mappe1-s364574"
 include(":app")
  

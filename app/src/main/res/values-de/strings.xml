@@ -29,5 +29,6 @@
     <string name="tilbakemeldingdel2">" Äpfel und Gustav haben "</string>
     <string name="tilbakemeldingdel3">" Äpfel, wie viel sind es dann insgesamt?"</string>
     <string name="riktigSvar">Richtig, gute Arbeit ;)</string>
+    <string name="dataLagret">DATEN GESPEICHERT</string>
 
 </resources>
